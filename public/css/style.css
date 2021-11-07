@@ -1,0 +1,38 @@
+.inline-block {
+    display: inline-block;
+}
+
+.border-left-male {
+    border-left-width: 0.25rem;
+    border-left-color: #5bc0de;
+}
+
+.border-left-female {
+    border-left-width: 0.25rem;
+    border-left-color: #e976d0;
+}
+
+.bg-male {
+	background-color: #eefaff;
+}
+
+.bg-female {
+	background-color: #fdf3fb;
+}
+
+.hero-image {
+	width: 50%;
+}
+
+/* TODO Hide input number icon */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
