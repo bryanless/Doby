@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light shadow-sm px-5">
+<nav class="navbar navbar-expand-sm navbar-light shadow-sm px-5 bg-nav">
 	<div class="container-fluid">
 		{{-- Logo --}}
 		<a href="/" class="navbar-brand">

@@ -15,7 +15,7 @@
 	<title>@yield('title')</title>
 </head>
 
-<body>
+<body class="bg-main">
 	@include('layouts.navigation')
 
 	<div class="container min-vh-100 d-flex justify-content-center align-items-center">

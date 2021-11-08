@@ -24,6 +24,18 @@
 	width: 50%;
 }
 
+.bg-nav {
+	background-color: rgb(191, 231, 191);
+}
+
+.bg-main {
+	background-color: rgb(236, 255, 236);
+}
+
+.bg-footer {
+	background-color: rgb(191, 231, 191);
+}
+
 /* TODO Hide input number icon */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
