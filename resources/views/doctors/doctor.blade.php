@@ -29,8 +29,8 @@
 		<div class="row d-flex align-items-center">
 			<div class="col-1 text-center">{{ $loop->iteration }}</div>
 			<div class="col">{{ $doctor['name'] }}</div>
-			<div class="col-2">{{ $doctor['str_number'] }}</div>
-			<div class="col-2">{{ $doctor['sip_number'] }}</div>
+			<div class="col-2">{{ $doctor->parseStrNumber($doctor['str_number']) }}</div>
+			<div class="col-2">{{ $doctor->parseSipNumber($doctor['sip_number']) }}</div>
 			<div class="col-2 text-center">
 				<a href="{{ route('doctors.show', $doctor['id']) }}" class="btn btn-primary">
 					<i class="far fa-eye"></i>
