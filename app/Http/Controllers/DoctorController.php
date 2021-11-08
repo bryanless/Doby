@@ -48,8 +48,8 @@ class DoctorController extends Controller
 			'address' => ['required'],
 			'phone' => ['required'],
 			'email' => ['required'],
-			'strNumber' => ['required'],
-			'sipNumber' => ['required'],
+			'strNumber' => ['required', 'size:16'],
+			'sipNumber' => ['required', 'size:16'],
 		]);
 
 		Doctor::create([
@@ -112,8 +112,8 @@ class DoctorController extends Controller
 			'address' => ['required'],
 			'phone' => ['required'],
 			'email' => ['required'],
-			'strNumber' => ['required'],
-			'sipNumber' => ['required'],
+			'strNumber' => ['required', 'size:16'],
+			'sipNumber' => ['required', 'size:16'],
 		]);
 
 		$doctor = Doctor::where('id', $doctorId);

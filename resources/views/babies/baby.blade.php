@@ -33,7 +33,7 @@
 				<a href="{{ route('babies.show', $baby['id']) }}" class="btn btn-primary">
 					<i class="far fa-eye"></i>
 				</a>
-				<a href="{{ route('babies.edit', $baby['id']) }}" class="btn btn-warning">
+				<a href="{{ route('babies.edit', $baby['id']) }}" class="btn btn-success">
 					<i class="far fa-edit"></i>
 				</a>
 				<span class="inline-block">

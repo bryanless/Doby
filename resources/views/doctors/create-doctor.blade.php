@@ -19,7 +19,7 @@
 	<div class="form-group">
 		<label for="gender" class="form-label text-muted">Gender</label>
 		<select id="gender" name="gender" required class="form-select">
-			<option value="" selected disabled hidden>Choose Gender</option>
+			<option value="" selected disabled hidden>Select</option>
 			<option value="male">Male</option>
 			<option value="female">Female</option>
 		</select>

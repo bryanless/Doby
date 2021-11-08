@@ -19,7 +19,7 @@
 	<div class="form-group">
 		<label for="gender" class="form-label text-muted">Gender</label>
 		<select id="gender" name="gender" required class="form-select">
-			<option value="" selected disabled hidden>Choose Gender</option>
+			<option value="" selected disabled hidden>Select</option>
 			<option value="male">Male</option>
 			<option value="female">Female</option>
 		</select>
@@ -32,7 +32,12 @@
 	<br />
 	<div class="form-group">
 		<label for="weight" class="form-label text-muted">Weight</label>
-		<input type="number" id="weight" name="weight" autocomplete="off" class="form-control">
+		<div class="input-group">
+			<input type="number" id="weight" name="weight" autocomplete="off" class="form-control">
+			<div class="input-group-append">
+				<span class="input-group-text" id="basic-addon2">gram</span>
+			</div>
+	</div>
 	</div>
 	<br />
 	<div class="form-group">

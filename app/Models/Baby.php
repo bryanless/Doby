@@ -26,6 +26,11 @@ class Baby extends Model
 			->format('Y-m-d\TH:i');
 	}
 
+	public function parseDatetimeToDatetimeBirth($dateTime) {
+		return Carbon::parse($dateTime)
+			->format('F j, Y - H:i');
+	}
+
 	public function doctor()
 	{
 		return $this->belongsTo(Doctor::class, 'doctor_in_charge', 'id');

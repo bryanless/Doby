@@ -33,29 +33,36 @@
 	<br />
 	<div class="form-group">
 		<label for="birthdateTime" class="form-label text-muted">Birthdate and Time</label>
-		<input type="datetime-local" id="birthdateTime" name="birthdateTime" value="{{ $baby->parseDatetimeToDatetimeLocal($baby['birth_date_time']) }}" required
-			class="form-control">
+		<input type="datetime-local" id="birthdateTime" name="birthdateTime"
+			value="{{ $baby->parseDatetimeToDatetimeLocal($baby['birth_date_time']) }}" required class="form-control">
 	</div>
 	<br />
 	<div class="form-group">
 		<label for="weight" class="form-label text-muted">Weight</label>
-		<input type="number" id="weight" name="weight" value="{{ $baby['weight'] }}" autocomplete="off" class="form-control">
+		<div class="input-group">
+			<input type="number" id="weight" name="weight" value="{{ $baby['weight'] }}" autocomplete="off"
+				class="form-control">
+			<div class="input-group-append">
+				<span class="input-group-text" id="basic-addon2">gram</span>
+			</div>
+		</div>
 	</div>
 	<br />
 	<div class="form-group">
 		<label for="birthOrder" class="form-label text-muted">Birth Order</label>
-		<input type="number" id="birthOrder" name="birthOrder" value="{{ $baby['birth_order'] }}" autocomplete="off" class="form-control">
+		<input type="number" id="birthOrder" name="birthOrder" value="{{ $baby['birth_order'] }}" autocomplete="off"
+			class="form-control">
 	</div>
 	<br />
 	<div class="form-group">
 		<label for="doctorInCharge" class="form-label text-muted">Doctor in Charge</label>
 		<select id="doctorInCharge" name="doctorInCharge" class="form-select">
 			@foreach ($doctors as $doctor)
-				@if ($baby['doctor_in_charge'] == $doctor['id'])
-					<option value="{{ $doctor['id'] }}" selected>{{ $doctor['name'] }}</option>
-				@else
-					<option value="{{ $doctor['id'] }}">{{ $doctor['name'] }}</option>
-				@endif
+			@if ($baby['doctor_in_charge'] == $doctor['id'])
+			<option value="{{ $doctor['id'] }}" selected>{{ $doctor['name'] }}</option>
+			@else
+			<option value="{{ $doctor['id'] }}">{{ $doctor['name'] }}</option>
+			@endif
 			@endforeach
 		</select>
 	</div>

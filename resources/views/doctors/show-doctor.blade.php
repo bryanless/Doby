@@ -26,30 +26,37 @@
 @endsection
 
 @section('main-content')
-<div class="card bg-light">
+<div class="card bg-light mb-5">
 	<div class="card-body">
 		<h3 class="card-title pb-4">{{ $doctor['name'] }}</h3>
 		<ul class="list-unstyled">
 			<li class="card-text text-muted">Gender</li>
 			<h5 class="card-text pb-3">{{ ucfirst($doctor['gender']) }}</h5>
 			<li class="card-text text-muted">Birthdate</li>
-			<h5 class="card-text pb-3">{{ $doctor['birth_date'] }}</h5>
+			<h5 class="card-text pb-3">{{ $doctor->parseDateToDateBirth($doctor['birth_date']) }}</h5>
 			<li class="card-text text-muted">Address</li>
 			<h5 class="card-text pb-3">{{ $doctor['address'] }}</h5>
 			<li class="card-text text-muted">Phone</li>
-			<h5 class="card-text pb-3">{{ $doctor['phone'] }}</h5>
+			<h5 class="card-text pb-3">{{ $doctor->parsePhoneNumber($doctor['phone']) }}</h5>
 			<li class="card-text text-muted">Email</li>
 			<h5 class="card-text pb-3">{{ $doctor['email'] }}</h5>
 			<li class="card-text text-muted">STR Number</li>
-			<h5 class="card-text pb-3">{{ $doctor['str_number'] }}</h5>
+			<h5 class="card-text pb-3">{{ $doctor->parseStrNumber($doctor['str_number']) }}</h5>
 			<li class="card-text text-muted">SIP Number</li>
-			<h5 class="card-text">{{ $doctor['sip_number'] }}</h5>
+			<h5 class="card-text">{{ $doctor->parseSipNumber($doctor['sip_number']) }}</h5>
 		</ul>
 	</div>
 </div>
 
 <h2 class="my-3">Baby List</h2>
 
+@php
+$babies = $doctor->babies;
+@endphp
+
+@if ($babies->count() === 0)
+<p class="text-muted">Nothing to show here</p>
+@else
 <div class="card my-1 border-0">
 	<div class="card-body p-2">
 		<div class="row d-flex align-items-center">
@@ -72,7 +79,7 @@
 				<a href="{{ route('babies.show', $baby['id']) }}" class="btn btn-primary">
 					<i class="far fa-eye"></i>
 				</a>
-				<a href="{{ route('babies.edit', $baby['id']) }}" class="btn btn-warning">
+				<a href="{{ route('babies.edit', $baby['id']) }}" class="btn btn-success">
 					<i class="far fa-edit"></i>
 				</a>
 				<span class="inline-block">
@@ -87,4 +94,5 @@
 	</div>
 </div>
 @endforeach
+@endif
 @endsection

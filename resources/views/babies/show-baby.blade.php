@@ -33,9 +33,9 @@
 			<li class="card-text text-muted">Gender</li>
 			<h5 class="card-text pb-3">{{ ucfirst($baby['gender']) }}</h5>
 			<li class="card-text text-muted">Birthdate and Time</li>
-			<h5 class="card-text pb-3">{{ $baby['birth_date_time'] }}</h5>
+			<h5 class="card-text pb-3">{{ $baby->parseDatetimeToDatetimeBirth($baby['birth_date_time']) }}</h5>
 			<li class="card-text text-muted">Weight</li>
-			<h5 class="card-text pb-3">{{ $baby['weight'] }}</h5>
+			<h5 class="card-text pb-3">{{ $baby['weight'] }} gram</h5>
 			<li class="card-text text-muted">Birth Order</li>
 			<h5 class="card-text pb-3">{{ $baby['birth_order'] }}</h5>
 			<li class="card-text text-muted">Doctor in Charge</li>
